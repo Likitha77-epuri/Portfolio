@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Likitha Epuri — AI & Full Stack Developer, Python Developer, JavaScript Enthusiast. Building AI-powered solutions and modern web applications that solve real-world problems." />
+  <meta name="keywords" content="Likitha Epuri, AI Developer, Full Stack Developer, Python Developer, JavaScript, Portfolio, Computer Science" />
+  <meta name="author" content="Likitha Epuri" />
+  <meta property="og:title" content="Likitha Epuri | AI & Full Stack Developer" />
+  <meta property="og:description" content="Building AI-powered solutions and modern web applications that solve real-world problems." />
+  <meta property="og:type" content="website" />
+  <title>Likitha Epuri | AI & Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">LE</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>LE<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#github-stats" class="nav-link">GitHub</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="https://drive.google.com/file/d/1hsGNAfaBsRrewYK5fqgv_YgnT55Gi9kx/view?usp=drive_link" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======= HERO SECTION ======= -->
+  <section id="hero" class="hero">
+    <!-- Animated Background -->
+    <div class="hero-bg">
+      <div class="bg-orb orb-1"></div>
+      <div class="bg-orb orb-2"></div>
+      <div class="bg-orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Floating Tech Icons -->
+    <div class="floating-icons" aria-hidden="true">
+      <div class="float-icon" style="--delay:0s;--x:10%;--y:20%"><i class="fab fa-python"></i></div>
+      <div class="float-icon" style="--delay:1.5s;--x:85%;--y:15%"><i class="fab fa-js-square"></i></div>
+      <div class="float-icon" style="--delay:3s;--x:92%;--y:65%"><i class="fab fa-html5"></i></div>
+      <div class="float-icon" style="--delay:0.8s;--x:5%;--y:70%"><i class="fab fa-github"></i></div>
+      <div class="float-icon" style="--delay:2.2s;--x:80%;--y:80%"><i class="fas fa-brain"></i></div>
+      <div class="float-icon" style="--delay:1s;--x:20%;--y:85%"><i class="fas fa-code"></i></div>
+      <div class="float-icon" style="--delay:3.5s;--x:60%;--y:10%"><i class="fab fa-css3-alt"></i></div>
+      <div class="float-icon" style="--delay:2s;--x:45%;--y:90%"><i class="fas fa-database"></i></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-profile" data-animate="fade-left">
+        <div class="profile-ring">
+          <img src="https://avatars.githubusercontent.com/u/229963027?v=4" alt="Likitha Epuri - AI & Full Stack Developer" class="profile-img" />
+        </div>
+        <div class="profile-badge">
+          <span class="badge-dot"></span>
+          Available for Opportunities
+        </div>
+      </div>
+
+      <div class="hero-text" data-animate="fade-right">
+        <p class="hero-greeting">Hello World! I'm</p>
+        <h1 class="hero-name">Likitha<br /><span class="gradient-text">Epuri</span></h1>
+        <div class="hero-role">
+          <span class="role-prefix">I'm a </span>
+          <span id="typed-text" class="typed-text"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-tagline">Building AI-powered solutions and modern web applications<br class="br-desktop" /> that solve real-world problems.</p>
+        <p class="hero-intro">
+          Passionate Computer Science student and aspiring AI &amp; Full Stack Developer who enjoys
+          building intelligent, user-friendly applications that solve real-world problems.
+          I love working with Python, JavaScript, and modern web technologies while continuously
+          improving my problem-solving and software development skills.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+            <i class="fas fa-rocket"></i> View Projects
+          </a>
+          <a href="https://drive.google.com/file/d/1hsGNAfaBsRrewYK5fqgv_YgnT55Gi9kx/view?usp=drive_link" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" id="hero-download-resume">
+            <i class="fas fa-file-pdf"></i> View Resume
+          </a>
+          <a href="#contact" class="btn btn-outline" id="hero-contact">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" class="social-icon-link" id="hero-github" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/likitha-epuri" target="_blank" rel="noopener noreferrer" class="social-icon-link" id="hero-linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:likithaeepuri77@gmail.com" class="social-icon-link" id="hero-email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+      <div class="scroll-wheel"></div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ======= ABOUT SECTION ======= -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Get To Know Me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-col" data-animate="fade-right">
+          <div class="about-img-wrapper">
+            <img src="https://avatars.githubusercontent.com/u/229963027?v=4" alt="Likitha Epuri" class="about-img" />
+            <div class="about-img-decoration"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card glass-card">
+              <span class="stat-number gradient-text">4+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-number gradient-text">5+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-number gradient-text">∞</span>
+              <span class="stat-label">Passion to Learn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-col" data-animate="fade-left">
+          <h3 class="about-subtitle">Aspiring AI &amp; Full Stack Developer</h3>
+          <p class="about-description">
+            I'm a passionate Computer Science student with a strong foundation in Python, JavaScript, SQL, HTML, CSS, and Bootstrap. I have hands-on experience developing AI-powered applications and am deeply interested in Artificial Intelligence, Full Stack Development, and Backend Development.
+          </p>
+          <p class="about-description">
+            I'm passionate about building impactful software that improves people's lives — from AI-powered assistive tools for visually impaired users to modern web applications. I continuously sharpen my skills in Data Structures &amp; Algorithms and modern software development practices.
+          </p>
+          <p class="about-description">
+            Currently seeking <strong class="gradient-text">internship and software engineering opportunities</strong> where I can contribute meaningfully, collaborate with talented teams, and accelerate my professional growth.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>AI &amp; Machine Learning enthusiast</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Full Stack &amp; Backend Development</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Data Structures &amp; Algorithms practitioner</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Open to internship &amp; engineering roles</span>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
+            <a href="https://drive.google.com/file/d/1hsGNAfaBsRrewYK5fqgv_YgnT55Gi9kx/view?usp=drive_link" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SKILLS SECTION ======= -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">What I Work With</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Technologies and tools I've been working with recently</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category glass-card" data-animate="fade-up" style="--delay:0.1s">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fas fa-palette"></i></div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-html5 html"></i><span>HTML5</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-css3-alt css"></i><span>CSS3</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-bootstrap bootstrap"></i><span>Bootstrap</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-js-square js"></i><span>JavaScript</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:78%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category glass-card" data-animate="fade-up" style="--delay:0.2s">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-python python"></i><span>Python</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-flask flask"></i><span>Flask</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:75%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-category glass-card" data-animate="fade-up" style="--delay:0.3s">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fas fa-database"></i></div>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-table sql"></i><span>SQL</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:72%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category glass-card" data-animate="fade-up" style="--delay:0.4s">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fas fa-tools"></i></div>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-git-alt git"></i><span>Git</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:82%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-github github-icon"></i><span>GitHub</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-code vscode"></i><span>VS Code</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--width:90%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Concepts -->
+        <div class="skill-category glass-card concepts-card" data-animate="fade-up" style="--delay:0.5s">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"><i class="fas fa-brain"></i></div>
+            <h3>Concepts</h3>
+          </div>
+          <div class="concepts-tags">
+            <span class="concept-tag">Data Structures</span>
+            <span class="concept-tag">Algorithms</span>
+            <span class="concept-tag">OOP</span>
+            <span class="concept-tag">REST APIs</span>
+            <span class="concept-tag">Problem Solving</span>
+            <span class="concept-tag">AI/ML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PROJECTS SECTION ======= -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">A selection of projects that showcase my skills and passion</p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1 (AI Assistant) -->
+        <div class="project-card glass-card" data-animate="fade-up" style="--delay:0.1s">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-eye"></i></div>
+            <div class="project-card-links">
+              <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="proj1-github"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Live Demo" id="proj1-demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Assistant for Visually Impaired People</h3>
+          <p class="project-desc">Developed an AI-powered assistive web application that helps visually impaired users identify surrounding objects using real-time YOLO object detection and voice feedback.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">Flask</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card glass-card" data-animate="fade-up" style="--delay:0.2s">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="project-card-links">
+              <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="proj2-github"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Live Demo" id="proj2-demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-desc">Designed and developed a responsive personal portfolio with modern UI, smooth animations, interactive project showcases, and optimized performance.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-card" data-animate="fade-up" style="--delay:0.3s">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fab fa-js-square"></i></div>
+            <div class="project-card-links">
+              <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="proj3-github"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">JavaScript Problem Solving Collection</h3>
+          <p class="project-desc">Collection of JavaScript coding challenges including arrays, objects, loops, functions, and algorithmic solutions demonstrating logical thinking and clean coding practices.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">DSA</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-card" data-animate="fade-up" style="--delay:0.4s">
+          <div class="project-card-top">
+            <div class="project-icon"><i class="fab fa-python"></i></div>
+            <div class="project-card-links">
+              <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" aria-label="GitHub" id="proj4-github"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Python DSA Practice</h3>
+          <p class="project-desc">Solved numerous Data Structures &amp; Algorithms problems in Python focusing on arrays, strings, recursion, searching, sorting, stacks, queues, linked lists, trees, and graphs.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">DSA</span>
+            <span class="tag">Algorithms</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-cta" data-animate="fade-up">
+        <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="all-projects-btn">
+          <i class="fab fa-github"></i> View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= EXPERIENCE SECTION ======= -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Experience &amp; <span class="gradient-text">Learning</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-timeline" data-animate="fade-right">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <span class="timeline-year">2024 – Present</span>
+                <span class="timeline-tag">AI Development</span>
+              </div>
+              <h3>AI-Powered Application Development</h3>
+              <p>Built an AI assistant for visually impaired people using YOLO object detection, Flask, and text-to-speech, delivering a real-world accessibility solution.</p>
+              <div class="timeline-tech">
+                <span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">Flask</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <span class="timeline-year">2023 – Present</span>
+                <span class="timeline-tag">Web Development</span>
+              </div>
+              <h3>Full Stack Web Development</h3>
+              <p>Designed and built multiple responsive web applications using HTML, CSS, Bootstrap, JavaScript, and Flask with a focus on clean UI and user experience.</p>
+              <div class="timeline-tech">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <span class="timeline-year">2022 – Present</span>
+                <span class="timeline-tag">Problem Solving</span>
+              </div>
+              <h3>Data Structures &amp; Algorithms Practice</h3>
+              <p>Actively solving DSA problems in Python and JavaScript covering arrays, strings, trees, graphs, dynamic programming and more to strengthen algorithmic thinking.</p>
+              <div class="timeline-tech">
+                <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">DSA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-focus" data-animate="fade-left">
+          <h3 class="focus-title">Areas of Focus</h3>
+          <p class="focus-subtitle">Continuously improving expertise through practical projects and self-driven learning:</p>
+          <div class="focus-cards">
+            <div class="focus-card glass-card">
+              <div class="focus-icon"><i class="fas fa-brain"></i></div>
+              <div class="focus-info">
+                <h4>Artificial Intelligence</h4>
+                <p>Deep learning, computer vision, YOLO models, assistive AI</p>
+              </div>
+            </div>
+            <div class="focus-card glass-card">
+              <div class="focus-icon"><i class="fas fa-layer-group"></i></div>
+              <div class="focus-info">
+                <h4>Full Stack Development</h4>
+                <p>Frontend interfaces, backend APIs, database integration</p>
+              </div>
+            </div>
+            <div class="focus-card glass-card">
+              <div class="focus-icon"><i class="fas fa-server"></i></div>
+              <div class="focus-info">
+                <h4>Backend Development</h4>
+                <p>Python, Flask, REST APIs, server-side logic</p>
+              </div>
+            </div>
+            <div class="focus-card glass-card">
+              <div class="focus-icon"><i class="fas fa-sitemap"></i></div>
+              <div class="focus-info">
+                <h4>Data Structures &amp; Algorithms</h4>
+                <p>Problem solving, competitive programming, coding challenges</p>
+              </div>
+            </div>
+            <div class="focus-card glass-card">
+              <div class="focus-icon"><i class="fas fa-cogs"></i></div>
+              <div class="focus-info">
+                <h4>Software Engineering</h4>
+                <p>OOP, clean code, version control, software design principles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= EDUCATION SECTION ======= -->
+  <section id="education" class="section education">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="education-card glass-card" data-animate="fade-up">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-details">
+          <span class="edu-degree">Bachelor of Technology</span>
+          <h3 class="edu-major">Computer Science &amp; Engineering</h3>
+          <p class="edu-desc">Currently pursuing B.Tech in Computer Science with a focus on AI, software development, data structures, algorithms, and modern web technologies.</p>
+          <div class="edu-tags">
+            <span class="tag">AI &amp; ML</span>
+            <span class="tag">Software Engineering</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">DSA</span>
+          </div>
+        </div>
+        <div class="edu-status">
+          <span class="status-badge"><span class="badge-dot"></span> Currently Enrolled</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= ACHIEVEMENTS SECTION ======= -->
+  <section id="achievements" class="section achievements">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card glass-card" data-animate="fade-up" style="--delay:0.1s">
+          <div class="achievement-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI Accessibility Solution</h3>
+          <p>Built an AI-powered assistive application for visually impaired users using YOLO, Flask, and voice synthesis — a meaningful, real-world impact project.</p>
+        </div>
+        <div class="achievement-card glass-card" data-animate="fade-up" style="--delay:0.2s">
+          <div class="achievement-icon"><i class="fab fa-python"></i></div>
+          <h3>Python Proficiency</h3>
+          <p>Developed strong Python skills through projects spanning AI, backend development, and data structures &amp; algorithms problem solving.</p>
+        </div>
+        <div class="achievement-card glass-card" data-animate="fade-up" style="--delay:0.3s">
+          <div class="achievement-icon"><i class="fab fa-js-square"></i></div>
+          <h3>JavaScript Mastery</h3>
+          <p>Built a collection of JavaScript problem-solving challenges demonstrating logical thinking, clean coding, and algorithmic efficiency.</p>
+        </div>
+        <div class="achievement-card glass-card" data-animate="fade-up" style="--delay:0.4s">
+          <div class="achievement-icon"><i class="fas fa-puzzle-piece"></i></div>
+          <h3>Real-World Problem Solver</h3>
+          <p>Passionate about applying technology to solve real-world problems — from accessibility apps to performance-optimized web solutions.</p>
+        </div>
+        <div class="achievement-card glass-card" data-animate="fade-up" style="--delay:0.5s">
+          <div class="achievement-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Continuous Learner</h3>
+          <p>Actively expanding Full Stack Development and AI/ML knowledge through daily practice, project building, and modern learning resources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= GITHUB STATS ======= -->
+  <section id="github-stats" class="section github-stats">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Open Source</span>
+        <h2 class="section-title">GitHub <span class="gradient-text">Stats</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">My coding activity and contribution overview</p>
+      </div>
+
+      <div class="github-cards" data-animate="fade-up">
+        <!-- GitHub Overview Card -->
+        <div class="github-stat-card gh-api-card" id="gh-overview-card">
+          <div class="gh-card-header">
+            <img src="https://avatars.githubusercontent.com/u/229963027?v=4" class="gh-card-avatar" alt="avatar" />
+            <div>
+              <div class="gh-card-name">Likitha Epuri</div>
+              <div class="gh-card-username">@Likitha77-epuri</div>
+            </div>
+            <i class="fab fa-github gh-card-icon"></i>
+          </div>
+          <div class="gh-stats-grid" id="gh-stats-grid">
+            <div class="gh-stat"><span class="gh-stat-num" id="gh-repos">—</span><span class="gh-stat-label">Repositories</span></div>
+            <div class="gh-stat"><span class="gh-stat-num" id="gh-followers">—</span><span class="gh-stat-label">Followers</span></div>
+            <div class="gh-stat"><span class="gh-stat-num" id="gh-following">—</span><span class="gh-stat-label">Following</span></div>
+            <div class="gh-stat"><span class="gh-stat-num" id="gh-stars">—</span><span class="gh-stat-label">Total Stars</span></div>
+          </div>
+          <div class="gh-card-footer">GitHub Profile Overview</div>
+        </div>
+        <!-- Top Languages Card -->
+        <div class="github-stat-card gh-api-card" id="gh-langs-card">
+          <div class="gh-card-header">
+            <div class="gh-card-title"><i class="fas fa-code"></i> Top Languages</div>
+          </div>
+          <div class="gh-langs-list" id="gh-langs-list">
+            <div class="gh-lang-loading"><i class="fas fa-circle-notch fa-spin"></i> Loading languages...</div>
+          </div>
+          <div class="gh-card-footer">Based on public repository code</div>
+        </div>
+      </div>
+
+      <div class="github-streak" data-animate="fade-up">
+        <img
+          src="https://streak-stats.demolab.com?user=Likitha77-epuri&theme=tokyonight&background=0D1117&border=3B82F6&stroke=8B5CF6&ring=3B82F6&fire=8B5CF6&currStreakLabel=3B82F6&sideLabels=CBD5E1&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=CBD5E1"
+          alt="GitHub Streak Stats"
+          loading="lazy"
+          class="streak-img"
+        />
+      </div>
+
+      <div class="github-profile-cta glass-card" data-animate="fade-up">
+        <div class="github-profile-info">
+          <div class="github-avatar"><i class="fab fa-github"></i></div>
+          <div>
+            <h3>@Likitha77-epuri</h3>
+            <p>Explore my repositories, pinned projects, and contributions</p>
+          </div>
+        </div>
+        <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="github-profile-btn">
+          <i class="fab fa-github"></i> Visit GitHub Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= LINKEDIN SECTION ======= -->
+  <section id="linkedin" class="section linkedin">
+    <div class="container">
+      <div class="linkedin-connect glass-card" data-animate="fade-up">
+        <div class="linkedin-icon"><i class="fab fa-linkedin"></i></div>
+        <div class="linkedin-text">
+          <h2>Let's Connect on <span class="gradient-text">LinkedIn</span></h2>
+          <p>I'm open to networking, mentorship, internship opportunities, and collaborations. Let's connect and build something amazing together!</p>
+        </div>
+        <a href="https://www.linkedin.com/in/likitha-epuri" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin" id="linkedin-connect-btn">
+          <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Have a project in mind or want to discuss an opportunity? I'd love to hear from you!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-animate="fade-right">
+          <h3 class="contact-info-title">Let's Talk</h3>
+          <p class="contact-info-desc">I'm currently seeking internship and software engineering opportunities. Whether you have a project, a question, or just want to say hi — my inbox is always open!</p>
+          <div class="contact-links">
+            <a href="mailto:likithaeepuri77@gmail.com" class="contact-link-item" id="contact-email-link">
+              <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-value">likithaeepuri77@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" class="contact-link-item" id="contact-github-link">
+              <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-value">@Likitha77-epuri</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/likitha-epuri" target="_blank" rel="noopener noreferrer" class="contact-link-item" id="contact-linkedin-link">
+              <div class="contact-link-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-value">likitha-epuri</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper" data-animate="fade-left">
+          <form action="https://formsubmit.co/likithaeepuri77@gmail.com" method="POST" class="contact-form glass-card">
+            <!-- FormSubmit options -->
+            <input type="hidden" name="_subject" value="New Portfolio Message!">
+            <input type="hidden" name="_template" value="box">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" id="contact-name" name="name" placeholder="Recruiter / Developer" required autocomplete="name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Your Email</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" id="contact-email" name="email" placeholder="hello@example.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fas fa-comment-dots input-icon"></i>
+                <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>LE<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Building AI-powered solutions and modern web applications that solve real-world problems.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/likitha-epuri" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:likithaeepuri77@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 <span class="gradient-text">Likitha Epuri</span>. All rights reserved.</p>
+        <p>Designed &amp; Developed with <span class="heart">❤️</span> using modern web technologies.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Likitha77-epuri" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/likitha-epuri" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:likithaeepuri77@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back To Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
